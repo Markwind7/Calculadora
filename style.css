@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #000936;
+    /*display: flex;
+    justify-content: center;
+    align-items: center; o Se puede alinear de esta forma con flex o con la siguiente*/
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    background-color: #152a94;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    gap: .5rem;
+}
+
+#tema {
+    grid-column: 1 / 2;
+    padding: 1rem;
+    font-size: .8rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.pantalla {
+    grid-column: 2 / 5;
+    background-color: #000936;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 500;
+}
+
+.boton {
+    background-color: #152a94;
+    color: white;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #000936;
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: #a80126;
+}
+
+#igual:hover {
+    background-color: #6b0017;
+}
